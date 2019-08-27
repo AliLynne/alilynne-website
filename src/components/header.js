@@ -2,6 +2,9 @@ import React from 'react'
 
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
+
 // import './header.module.scss'
 import headerStyles from './header.module.scss'
 
@@ -20,6 +23,7 @@ const Header = () => {
     <header className={headerStyles.header}>
       <h1>
         <Link className={headerStyles.title} to="/">
+          <FontAwesomeIcon icon={faBookOpen} className={headerStyles.icon}/>
           {data.site.siteMetadata.title}
         </Link>
       </h1>

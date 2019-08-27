@@ -7,7 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: 'AliLynne',
-    author: 'Ali Lynne Thompson'
+    author: 'Ali Lynne Thompson',
+    description: 'Personal homepage of Ali Thompson'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,6 +34,12 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        families: ['Roboto']
       }
     }
   ]

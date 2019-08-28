@@ -1,0 +1,18 @@
+[
+  {
+    "title": "GitConsensus Config Builder",
+    "description": "Config Builder and Documentation for OS project GitConsensus",
+    "projectUrl": "https://www.gitconsensus.com",
+    "sourceUrl": "https://github.com/gitconsensus/www.gitconsensus.com/"
+  },
+  {
+    "title": "Thing Two",
+    "description": "Description of Thing Two",
+    "projectUrl": "https://www.alilynne.com"
+  },
+  {
+    "title": "Thing Three",
+    "description": "Description of Thing Three",
+    "projectUrl": "https://www.example.com"
+  }
+]

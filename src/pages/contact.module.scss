@@ -1,6 +1,7 @@
 .list {
   list-style-type: none;
   display: flex;
+  margin-left: 0;
 
   &__item {
     margin: 1rem;

@@ -12,6 +12,8 @@
     display: block;
     padding: 1rem;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 
     &:hover {
       background: #e4e4e4;
@@ -28,4 +30,9 @@
     font-size: .8rem;
     font-style: italic;
   }
+}
+
+.icon {
+  color: #ff94c2;
+  margin-right: 1rem;
 }

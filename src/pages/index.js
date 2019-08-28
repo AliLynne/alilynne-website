@@ -30,7 +30,10 @@ const IndexPage = () => {
       <div className={homeStyles.container}>
         <div className={homeStyles.info}>
           <h1>Hi, I'm Ali.</h1>
-          <p>Need a developer? <Link to="/contact">Contact Me.</Link></p>
+          <p>Full Stack Web Developer</p>
+          <p>
+            <Link to="/contact">Contact Me</Link>
+          </p>
         </div>
         <div className={homeStyles.image}>
           <Img

@@ -8,6 +8,7 @@
 
   .caption {
     font-size: .5rem;
+    text-align: right;
   }
 }
 
@@ -16,4 +17,14 @@
   flex-direction: column;
   justify-content: center;
   flex-grow: .5;
+  text-align: center;
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  a {
+    color: #ba2d65;
+    text-decoration: none;
+  }
 }

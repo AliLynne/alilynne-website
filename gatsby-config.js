@@ -11,6 +11,14 @@ module.exports = {
     description: 'Personal homepage of Ali Thompson'
   },
   plugins: [
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: "CatFact",
+        fieldName: "catfacts",
+        url: `https://cat-fact.herokuapp.com/facts`
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {

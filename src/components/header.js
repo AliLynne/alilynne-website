@@ -42,6 +42,7 @@ const Header = () => {
             className={headerStyles.navItem}
             activeClassName={headerStyles.activeNavItem}
             to="/about"
+            partiallyActive={true}
           >
             About
           </Link>
@@ -51,6 +52,7 @@ const Header = () => {
             className={headerStyles.navItem} 
             to="/contact"
             activeClassName={headerStyles.activeNavItem}
+            partiallyActive={true}
           >
             Contact
           </Link>

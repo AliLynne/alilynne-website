@@ -3,7 +3,7 @@
 }
 
 .title {
-  color: #000;
+  color: #3b3b3b;
   font-size: 3rem;
   text-decoration: none;
   display: flex;
@@ -22,13 +22,13 @@
 }
 
 .nav-item {
-  color: #1b1b1b;
+  color: #3b3b3b;
   font-size: .9rem;
   margin-right: 1.3rem;
   text-decoration: none;
 
   &:hover {
-    color: #666;
+    color: #000;
   }
 }
 

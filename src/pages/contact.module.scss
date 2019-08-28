@@ -8,7 +8,11 @@
   }
 
   &__icon {
-    color: #ff94c2;
+    color: #ba2d65;
+
+    &:hover {
+      color: #f06292;
+    }
   }
 }
 

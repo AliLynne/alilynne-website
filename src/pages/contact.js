@@ -15,12 +15,12 @@ const ContactPage = () => {
       <h1>Contact Info</h1>
       <ul className={contactStyles.list}>
         <li className={contactStyles.list__item}>
-          <a href="https://www.twitter.com/alilynnet">
+          <a className={contactStyles.list__icon} href="https://www.twitter.com/alilynnet">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
         </li>
         <li className={contactStyles.list__item}>
-          <a href="https://dev.to/alilynne">
+          <a className={contactStyles.list__icon} href="https://dev.to/alilynne">
             <FontAwesomeIcon icon={faDev} />
           </a>
         </li>

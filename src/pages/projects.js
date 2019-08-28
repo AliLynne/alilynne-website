@@ -17,7 +17,8 @@ const Projects = () => {
         edges {
           node {
             title
-            url
+            projectUrl
+            sourceUrl
             description
             id
           }
@@ -34,7 +35,7 @@ const Projects = () => {
         {data.allProjectsJson.edges.map(edge => {
           return (
             <li key={edge.node.id} className={projectStyles.project}>
-              <a href={edge.node.url}>
+              <a href={edge.node.sourceUrl}>
                 <FontAwesomeIcon icon={faAngleRight} className={projectStyles.icon} size="4x"/>
                 <div>
                   <h3>{edge.node.title}</h3>

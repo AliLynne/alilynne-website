@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import Logo from '../images/icons/rosePink.svg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
@@ -16,17 +18,17 @@ const Header = () => {
           title
         }
       }
-    } 
+    }
   `)
 
   return (
     <header className={headerStyles.header}>
-      <h1>
         <Link className={headerStyles.title} to="/">
-          <FontAwesomeIcon icon={faBookOpen} className={headerStyles.icon}/>
-          {data.site.siteMetadata.title}
+          <h1 className={headerStyles.titleHeader}>
+            <Logo />
+            {data.site.siteMetadata.title}
+          </h1>
         </Link>
-      </h1>
       <ul className={headerStyles.navList}>
         <li>
           <Link 
@@ -65,6 +67,16 @@ const Header = () => {
             partiallyActive={true}
           >
             Blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            className={headerStyles.navItem}
+            to="/projects"
+            activeClassName={headerStyles.activeNavItem}
+            partiallyActive={true}
+          >
+            Projects
           </Link>
         </li>
       </ul>

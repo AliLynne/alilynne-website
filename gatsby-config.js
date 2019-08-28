@@ -11,12 +11,12 @@ module.exports = {
     description: 'Personal homepage of Ali Thompson'
   },
   plugins: [
+    `gatsby-transformer-json`,
     {
-      resolve: `gatsby-source-graphql`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        typeName: "CatFact",
-        fieldName: "catfacts",
-        url: `https://cat-fact.herokuapp.com/facts`
+        name: `data`,
+        path: `${__dirname}/src/data`
       }
     },
     `gatsby-plugin-react-helmet`,
@@ -28,7 +28,15 @@ module.exports = {
         path: `${__dirname}/src`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
+      }
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -48,6 +56,20 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         families: ['Roboto']
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `src/images/rosePink.svg`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /icons/
+        }
       }
     }
   ]

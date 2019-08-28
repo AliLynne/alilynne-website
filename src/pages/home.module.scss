@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+}
+
+
+.image {
+  flex-grow: 1;
+
+  .caption {
+    font-size: .5rem;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: .5;
+}

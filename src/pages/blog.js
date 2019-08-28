@@ -2,6 +2,9 @@ import React from 'react'
 
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard, faDev } from '@fortawesome/free-solid-svg-icons'
+
 import Layout from '../components/layout'
 import Head from '../components/head'
 import blogStyles from './blog.module.scss'
@@ -35,8 +38,11 @@ const BlogPage = () => {
             return (
               <li key={post.node.id} className={blogStyles.post}>
                 <Link to={`/blog/${post.node.fields.slug}`}>
-                  <h2>{post.node.frontmatter.title}</h2>
-                  <p>{post.node.frontmatter.date}</p>
+                  <FontAwesomeIcon icon={faClipboard} className={blogStyles.icon} size="3x" />
+                  <div>
+                    <h2>{post.node.frontmatter.title}</h2>
+                    <p>{post.node.frontmatter.date}</p>
+                  </div>
                 </Link>
               </li>
             )

@@ -6,13 +6,13 @@
     "sourceUrl": "https://github.com/gitconsensus/www.gitconsensus.com/"
   },
   {
-    "title": "Thing Two",
-    "description": "Description of Thing Two",
+    "title": "AliLynne.com",
+    "description": "My personal website",
     "projectUrl": "https://www.alilynne.com"
   },
   {
-    "title": "Thing Three",
-    "description": "Description of Thing Three",
-    "projectUrl": "https://www.example.com"
+    "title": "Meditation Tracker",
+    "description": "Meditation tracker using React, Express & Firebase",
+    "projectUrl": "https://www.alilynne.com"
   }
 ]

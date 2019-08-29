@@ -11,7 +11,7 @@ const AboutPage = () => {
       <Layout>
         <Head title="About" />
         <h1>About</h1>
-        <p>'m a full stack web developer currently contributing to f/oss. Mu current focus is on React and Gatsby, but I love all things JavaScript.</p>
+        <p>I'm a full stack web developer currently contributing to f/oss. Mu current focus is on React and Gatsby, but I love all things JavaScript.</p>
         <p>Currently open to Full-Time or Part-Time Web Development in the San Francisco Bay Area or Remote.</p>
         <ul>
           <li>

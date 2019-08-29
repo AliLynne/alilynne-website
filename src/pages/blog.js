@@ -18,7 +18,7 @@ const BlogPage = () => {
             id
             frontmatter {
               title
-              date(fromNow: true)
+              date
             }
             fields {
               slug

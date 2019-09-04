@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AliLynne]]></title><description><![CDATA[Where Ali talks about programming and life. She focuses on JavaScript, React, & Gatsby as well as crochet and sewing.]]></description><link>https://www.alilynne.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 04 Sep 2019 23:45:24 GMT</lastBuildDate><item><title><![CDATA[Making a Gatsby Hello World Starter]]></title><description><![CDATA[Prerequisites Have created a Gatsby site with a starter Check out Gatsby's docs and come back later if you need to. Getting Started First…]]></description><link>https://www.alilynne.com2019_08_04_Create_Hello_World_Starter</link><guid isPermaLink="false">https://www.alilynne.com2019_08_04_Create_Hello_World_Starter</guid><pubDate>Wed, 04 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Have created a Gatsby site with a starter&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check out Gatsby&apos;s &lt;a href=&quot;https://www.gatsbyjs.org/docs/&quot;&gt;docs&lt;/a&gt; and come back later if you need to.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Getting Started&lt;/h3&gt;
+&lt;p&gt;First, make a new directory for your project. I&apos;ve gone with gatsby_playground for mine.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir gatsby_playground
+cd gatsby_playground
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Create the Project&lt;/h3&gt;
+&lt;p&gt;Now we&apos;re going to want to actually create our project. Run an npm init in your console. You can just accept all of the defaults.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;name&quot;: &quot;gatsby_playground&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;#x26;&amp;#x26; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Required Packages&lt;/h3&gt;
+&lt;p&gt;We only need three packages to get us started: Gatsby, React, &amp;#x26; React-Dom.&lt;/p&gt;
+&lt;p&gt;Install all three.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install gatsby react react-dom
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Start the Server&lt;/h3&gt;
+&lt;p&gt;Now, if that went right, we should just need to start our development server
+in the console.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gatsby develop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Create Structure&lt;/h3&gt;
+&lt;p&gt;It&apos;s all well and good to have a server running. But it isn&apos;t really doing much because we haven&apos;t added any sort of content yet. To do that we need to create a couple of folders and one file. We&apos;ll need a &lt;code&gt;src&lt;/code&gt; folder and inside the &lt;code&gt;src&lt;/code&gt; we need a &lt;code&gt;pages&lt;/code&gt; folder. Inside the &lt;code&gt;pages&lt;/code&gt; folder make a file called &lt;code&gt;index.js&lt;/code&gt;. It &lt;strong&gt;must&lt;/strong&gt; be called &lt;code&gt;index.js&lt;/code&gt;. This is location and filename Gatsby looks for in order to serve your content.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir src
+cd src
+mkdir pages
+cd pages
+touch index.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Add Content&lt;/h3&gt;
+&lt;p&gt;Inside &lt;code&gt;index.js&lt;/code&gt; we need to create a React component. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// src/pages/index.js
+
+import React from &apos;react&apos;
+
+const Index = () =&gt; {
+  return (
+    &amp;#x3C;div&gt;
+      Have a great day!
+    &amp;#x3C;/div&gt;
+  )
+}
+
+export default Index
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, when we run our &lt;code&gt;gatsby develop&lt;/code&gt; command in the terminal in the root directory of our project, we&apos;ll get &quot;Have a great day!&quot; in our browser.&lt;/p&gt;
+&lt;p&gt;That&apos;s it! We have a Gatsby site! Just one more thing and we&apos;re done.&lt;/p&gt;
+&lt;h3&gt;Add Scripts&lt;/h3&gt;
+&lt;p&gt;The Gatsby CLI comes with a few commands that we&apos;ll want to add to our &lt;code&gt;package.json&lt;/code&gt; for convenience. You can learn more about these commands &lt;a href=&quot;https://www.gatsbyjs.org/docs/gatsby-cli/&quot;&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// package.json
+...
+
+&quot;license&quot;: &quot;MIT&quot;,
+  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;gatsby build&quot;,
+    &quot;develop&quot;: &quot;gatsby develop&quot;,
+    &quot;start&quot;: &quot;npm run develop&quot;,
+    &quot;serve&quot;: &quot;gatsby serve&quot;,
+    &quot;test&quot;: &quot;echo \&quot;Write tests! -&gt; https://gatsby.dev/unit-testing \&quot;&quot;
+  },
+  &quot;dependencies&quot;: {
+
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can start our development server with the following terminal command:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm run start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Final code for this project can be found &lt;a href=&quot;https://github.com/AliLynne/gatsby_hello_world&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[I Made Another Website]]></title><description><![CDATA[I Can't Help Myself I stumbled onto Frontend Mentor a couple of weeks ago and I've finally gotten around to doing a challenge.  Frontend…]]></description><link>https://www.alilynne.com2019_08_29_made_another</link><guid isPermaLink="false">https://www.alilynne.com2019_08_29_made_another</guid><pubDate>Thu, 29 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;I Can&apos;t Help Myself&lt;/h2&gt;
+&lt;p&gt;I stumbled onto &lt;a href=&quot;https://www.frontendmentor.io&quot;&gt;Frontend Mentor&lt;/a&gt; a couple of weeks ago and I&apos;ve finally gotten around to doing a challenge. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.frontendmentor.io&quot;&gt;Frontend Mentor&lt;/a&gt; is a website that streamlines the process for practicing front end developers to create real projects. I&apos;ve spent a lot of time lately working with Material Design/Material-UI and I felt like some of my CSS skills were getting rusty. I&apos;d been using MD because it kept me from spending hours and hours trying to figure out exactly how I wanted to position components. Frontend Mentor does the same thing by giving me an already thought out design.&lt;/p&gt;
+&lt;p&gt;For my first challenge I went with one of the &quot;Newbie&quot; designated designs just to see what it was all about. And I can say that I love it and will be doing more of these. The downloaded file gave me all the images and font choices and the colors that I needed to create the design.&lt;/p&gt;
+&lt;p&gt;All I had to do was copy and paste it into my Gatsby hello-world starter and get to work creating components.&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;https://beta.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1&quot;&gt;Design!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And my (not quite finished) &lt;a href=&quot;https://alilynnefrontendmentor.firebaseapp.com/&quot;&gt;Result!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hoping to get to doing another one soon where I walk through my process of breaking the project down into parts and getting started.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TIL #1]]></title><description><![CDATA[Gatsby Link and activeClassName I've used the Link component from Gatsby before, but didn't know about activeClassName. For those who aren't…]]></description><link>https://www.alilynne.comTIL_2019_08_25</link><guid isPermaLink="false">https://www.alilynne.comTIL_2019_08_25</guid><pubDate>Mon, 26 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 750px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.6731936557666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgAB/9oADAMBAAIQAxAAAAFYdCaKt//EABoQAAICAwAAAAAAAAAAAAAAAAABERMDEiH/2gAIAQEAAQUCIlaylk7aWn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAMQEhkhH/2gAIAQEABj8C5ehTouJ0IQj/xAAcEAACAgIDAAAAAAAAAAAAAAAAARFBUWEhMbH/2gAIAQEAAT8hSdJRYdRgKE5ex3/WyyzyS52yf//aAAwDAQACAAMAAAAQDB//xAAWEQEBAQAAAAAAAAAAAAAAAAABABH/2gAIAQMBAT8QFtb/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxCI/8QAHBABAAICAwEAAAAAAAAAAAAAAQARIXExUZGh/9oACAEBAAE/EBhdPKwy11AociAqoS0JTgTOot/PQ9QoZlv61Amlcn1qf//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Shelf of books&quot;
+        title=&quot;Shelf of books&quot;
+        src=&quot;/static/4ecbeb4609ba9b631c41f971f3059ad3/a66cd/books.jpg&quot;
+        srcset=&quot;/static/4ecbeb4609ba9b631c41f971f3059ad3/4272c/books.jpg 188w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/1459e/books.jpg 375w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/a66cd/books.jpg 750w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/c0626/books.jpg 1125w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/45751/books.jpg 1500w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/cfb5d/books.jpg 5107w&quot;
+        sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Gatsby Link and activeClassName&lt;/h2&gt;
+&lt;p&gt;I&apos;ve used the Link component from Gatsby before, but didn&apos;t know about activeClassName. For those who aren&apos;t familiar, Gatsby&apos;s Link component is used to create internal links in your Gatsby site. (If you need to link to an external source, just stick with an &lt;code&gt;&amp;#x3C;a&gt;&lt;/code&gt; tag.)&lt;/p&gt;
+&lt;p&gt;In this instance, I&apos;m using it to navigate from the homepage to the Contact page of my website.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;#x3C;Link to=&quot;/contact/&quot;&gt;Contact&amp;#x3C;/Link&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If I add a couple more links inside of an unordered list, I get a navigation menu:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;#x3C;ul&gt;
+  &amp;#x3C;li&gt;
+    &amp;#x3C;Link to=&quot;/contact/&quot;&gt;Contact&amp;#x3C;/Link&gt;
+  &amp;#x3C;/li&gt;
+  &amp;#x3C;li&gt;
+    &amp;#x3C;Link to=&quot;/about/&quot;&gt;About&amp;#x3C;/Link&gt;
+  &amp;#x3C;/li&gt;
+  &amp;#x3C;li&gt;
+    &amp;#x3C;Link to=&quot;/&quot;&gt;Home&amp;#x3C;/Link&gt;
+  &amp;#x3C;/li&gt;
+&amp;#x3C;/ul&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The icing on the cake is adding a couple of classnames to each &lt;code&gt;Link&lt;/code&gt; and a small amount of css.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;#x3C;Link className=&quot;link&quot; activeClassName=&quot;active-link&quot; to=&quot;/contact/&quot;&gt;Contact&amp;#x3C;/Link&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.link {
+  color: #000;
+}
+
+.active-link {
+  color: #ba2d65;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With those two bits of additional code, our Contact link will now be pink when the current URL matches the Link&apos;s &lt;code&gt;to&lt;/code&gt; prop &lt;em&gt;exactly&lt;/em&gt;. We now have a simple navigation menu.&lt;/p&gt;
+&lt;p&gt;Photo by Jessica Ruscello on Unsplash&lt;/p&gt;</content:encoded></item></channel></rss>

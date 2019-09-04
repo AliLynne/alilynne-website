@@ -1,3 +1,8 @@
+.about {
+  display: flex;
+}
+
+
 ul {
   list-style: none;
   margin-left: 0;
@@ -10,4 +15,30 @@ a {
   &:hover {
       color: #f06292;
     }
+}
+
+.info {
+  padding-right: 2rem;
+}
+
+.image {
+  border: 1rem solid black;
+  height: 100%;
+  width: 25vw;
+  transform: scaleX(-1)
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border-radius: 2px;
+  background-color: #ddc;
+  max-width: 20rem;
+  border:solid 3rem #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-right-color:#eee;
+  border-top-color:#ddd;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
 }

@@ -37,7 +37,7 @@ const ContactPage = () => {
           </a>
         </li>
         <li className={contactStyles.list__item}>
-          <a className={contactStyles.list__icon} href="mailto:alilynne.thompson@gmail.com">
+          <a className={contactStyles.list__icon} href="mailto:ali@alilynne.com">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </li>

@@ -5,14 +5,14 @@ import { faTwitter, faDev, faGithubSquare, faLinkedin } from '@fortawesome/free-
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from '../components/seo'
 
 import contactStyles from './contact.module.scss'
 
 const ContactPage = () => {
   return (
     <Layout>
-      <Head title="Contact" />
+      <SEO title="Contact" />
       <h1>Contact Info</h1>
       <p>Feel free to contact me whichever way works for you!</p>
       <ul className={contactStyles.list}>

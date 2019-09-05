@@ -13,7 +13,7 @@ tags: ["Gatsby", "React"]
 
 First, make a new directory for your project. I've gone with gatsby_playground for mine.
 
-```
+```bash
 mkdir gatsby_playground
 cd gatsby_playground
 ```
@@ -22,11 +22,13 @@ cd gatsby_playground
 
 Now we're going to want to actually create our project. Run an npm init in your console. You can just accept all of the defaults.
 
-```
+```bash
 npm init
 ```
 
-```
+This should be your result:
+
+```bash
 {
   "name": "gatsby_playground",
   "version": "1.0.0",
@@ -46,7 +48,7 @@ We only need three packages to get us started: Gatsby, React, & React-Dom.
 
 Install all three.
 
-```
+```bash
 npm install gatsby react react-dom
 ```
 
@@ -55,7 +57,7 @@ npm install gatsby react react-dom
 Now, if that went right, we should just need to start our development server
 in the console.
 
-```
+```bash
 gatsby develop
 ```
 
@@ -63,7 +65,7 @@ gatsby develop
 
 It's all well and good to have a server running. But it isn't really doing much because we haven't added any sort of content yet. To do that we need to create a couple of folders and one file. We'll need a `src` folder and inside the `src` we need a `pages` folder. Inside the `pages` folder make a file called `index.js`. It __must__ be called `index.js`. This is location and filename Gatsby looks for in order to serve your content.
 
-```
+```bash
 mkdir src
 cd src
 mkdir pages
@@ -75,10 +77,13 @@ touch index.js
 
 Inside `index.js` we need to create a React component. 
 
-```js
+```jsx
 // src/pages/index.js
 
+// highlight-start
 import React from 'react'
+// highlight-end
+
 
 const Index = () => {
   return (
@@ -118,7 +123,7 @@ The Gatsby CLI comes with a few commands that we'll want to add to our `package.
 
 Now we can start our development server with the following terminal command:
 
-```
+```bash
 npm run start
 ```
 

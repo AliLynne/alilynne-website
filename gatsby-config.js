@@ -7,10 +7,16 @@
 module.exports = {
   siteMetadata: {
     title: 'AliLynne',
+    titleTemplate: "%s | AliLynne",
     author: 'Ali Lynne Thompson',
-    description: 'Personal homepage of Ali Thompson'
+    description: 'Where Ali talks about programming and life. She focuses on JavaScript, React, & Gatsby as well as crochet and sewing.',
+    url: "https://www.alilynne.com",
+    siteUrl: "https://www.alilynne.com",
+    image: "/src/images/rosePink.png",
+    twitterUsername: "@alilynnet"
   },
   plugins: [
+    `gatsby-plugin-feed`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -47,6 +53,12 @@ module.exports = {
             options: {
               maxWidth: 750,
               linkImagesToOriginal: false
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true
             }
           }
         ]

@@ -7,7 +7,7 @@ import { faAngleRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-ico
 import { faGithubSquare} from '@fortawesome/free-brands-svg-icons'
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from '../components/seo'
 
 import projectStyles from './projects.module.scss'
 
@@ -30,7 +30,7 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Head title="Projects" />
+      <SEO title="Projects" />
       <h2>Projects</h2>
       <ul className={projectStyles.projects}>
         {data.allProjectsJson.edges.map(edge => {

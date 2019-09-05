@@ -1,12 +1,9 @@
-// React comes installed with Gatsby
 import React from 'react'
-// Gatsby is also installed w/ the starter
-// Link is a react component
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from '../components/seo'
 
 import homeStyles from './home.module.scss'
 
@@ -26,7 +23,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <Head title="Home" />
+      <SEO title="Home" />
       <div className={homeStyles.container}>
         <div className={homeStyles.info}>
           <h1>Hi, I'm Ali.</h1>

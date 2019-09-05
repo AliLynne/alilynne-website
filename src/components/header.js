@@ -1,11 +1,7 @@
 import React from 'react'
 
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 import Logo from '../images/icons/rosePink.svg'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
 
 // import './header.module.scss'
 import headerStyles from './header.module.scss'

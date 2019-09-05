@@ -3,10 +3,10 @@ import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboard, faDev } from '@fortawesome/free-solid-svg-icons'
+import { faClipboard } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from '../components/seo'
 import blogStyles from './blog.module.scss'
 
 const BlogPage = () => {
@@ -31,7 +31,7 @@ const BlogPage = () => {
   
   return (
       <Layout>
-        <Head title="Blog" />
+        <SEO title="Blog" />
         <h2>Blog Posts</h2>
         <ol className={blogStyles.posts}>
           {data.allMarkdownRemark.edges.map(post => {

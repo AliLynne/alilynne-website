@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+import SEO from '../components/seo'
 
 
 
@@ -26,7 +26,7 @@ const AboutPage = () => {
   `)
   return (
       <Layout>
-        <Head title="About" />
+        <SEO title="About" />
         <section className={aboutStyles.about}>
           <div className={aboutStyles.info}>
             <h1>About</h1>

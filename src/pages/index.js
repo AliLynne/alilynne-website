@@ -11,7 +11,7 @@ import homeStyles from './home.module.scss'
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: {eq: "images/flower.jpg"}) {
+      file(relativePath: {regex: "/flower.jpg/"}) {
         id
         childImageSharp {
           fluid {

@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   siteMetadata: {
@@ -16,7 +12,39 @@ module.exports = {
     twitterUsername: "@alilynnet"
   },
   plugins: [
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            query: `
+              {
+                allMarkdownRemark(
+                  limit: 1000,
+                  sort: {order: DESC, fields: [frontmatter___date]},
+                  filter: {frontmatter: {draft: {ne: true}}}
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: `rss.xml`
+          }
+        ]
+      }
+    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,8 +58,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src`
+        name: `blog`,
+        path: `${__dirname}/src/posts`,
+        ignore: isProd ? ['**/_*.md'] : []
       }
     },
     {
@@ -84,6 +113,13 @@ module.exports = {
         rule: {
           include: /icons/
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-fathom`,
+      options: {
+        trackingUrl: `fathom.tdvm.net`,
+        siteId: 'KOKQF'
       }
     }
   ]

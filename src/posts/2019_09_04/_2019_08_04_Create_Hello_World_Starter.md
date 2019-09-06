@@ -1,13 +1,18 @@
 ---
-title: "Making a Gatsby Hello World Starter"
+title: "Making a Gatsby Hello World Starter From Scratch"
 date: "2019-09-04"
 category: "Tech"
 tags: ["Gatsby", "React"]
+draft: true
 ---
 
-###Prerequisites
+### Prerequisites
 - Have created a Gatsby site with a starter
   - Check out Gatsby's [docs](https://www.gatsbyjs.org/docs/) and come back later if you need to.
+
+### In this tutorial you will:
+
+...build a very simple Gatsby Hello World starter. You will learn...
 
 ### Getting Started
 
@@ -20,7 +25,7 @@ cd gatsby_playground
 
 ### Create the Project
 
-Now we're going to want to actually create our project. Run an npm init in your console. You can just accept all of the defaults.
+Now we're going to want to actually create our project. Run `npm init` in your console. You'll be asked a series of questions. You can just hit enter to accept all of the defaults.
 
 ```bash
 npm init

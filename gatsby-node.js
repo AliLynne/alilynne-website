@@ -20,7 +20,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const blogTemplate = path.resolve('./src/templates/blog.js')
   const res = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        sort: {fields: [frontmatter___date], order: DESC},
+        ${
+          process.env.NODE_ENV === 'production' ?
+          'filter: {frontmatter: {draft: {ne: true}}}' :
+          ''
+        }
+        limit: 1000
+      ) {
         edges {
           node {
             fields {

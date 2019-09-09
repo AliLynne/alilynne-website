@@ -9,9 +9,27 @@ module.exports = {
     url: "https://www.alilynne.com",
     siteUrl: "https://www.alilynne.com",
     image: "/src/images/rosePink.png",
-    twitterUsername: "@alilynnet"
+    twitterUsername: "@alilynnet",
+    stripe: {
+      public_key: 'pk_live_5nKb8kqHdyaoi9bASiiKbdOO00eHIdX5YK',
+      plans:
+        [
+          {
+            "label": "$5 per month",
+            "id": "plan_Fm950fWNdiNekC"
+          },
+          {
+            "label": "$10 per month",
+            "id": "plan_Fm96pTXYQTIoad"
+          }
+        ],
+      button_text: "Keep Me Going",
+      success_page: "success",
+      cancel_page: "cancel"
+    }
   },
   plugins: [
+    `gatsby-plugin-stripe`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {

@@ -3,6 +3,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Stripe from '../components/stripe'
 
 import postStyles from './blogpost.module.scss'
 
@@ -26,6 +27,7 @@ const Blog = (props) => {
       <p>{props.data.markdownRemark.frontmatter.date}</p>
       <div className={postStyles.outer} dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}>
       </div>
+      <Stripe />
     </Layout>
   )
 }

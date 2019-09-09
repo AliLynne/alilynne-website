@@ -7,12 +7,17 @@ draft: true
 ---
 
 ### Prerequisites
-- Have created a Gatsby site with a starter
-  - Check out Gatsby's [docs](https://www.gatsbyjs.org/docs/) and come back later if you need to.
+  #### Required
+
+  - Installed [Gatsby CLI](https://www.gatsbyjs.org/docs/quick-start)
+
+  #### Nice to have
+- Have created a Gatsby site with a [starter](https://www.gatsbyjs.org/starters/?v=2)
+  - Check out [Gatsby's Docs](https://www.gatsbyjs.org/docs/) and come back later if you need to.
 
 ### In this tutorial you will:
 
-...build a very simple Gatsby Hello World starter. You will learn...
+...build a very simple Gatsby Hello World starter from complete scratch. You will learn what bare minimum components are required for the simplest of Gatsby projects.
 
 ### Getting Started
 
@@ -107,7 +112,7 @@ That's it! We have a Gatsby site! Just one more thing and we're done.
 
 ### Add Scripts
 
-The Gatsby CLI comes with a few commands that we'll want to add to our `package.json` for convenience. You can learn more about these commands [here](https://www.gatsbyjs.org/docs/gatsby-cli/). 
+The Gatsby CLI comes with a few commands that we'll want to add to our `package.json` for convenience. You can learn more about these commands in the [Gatsby Docs](https://www.gatsbyjs.org/docs/gatsby-cli/). 
 
 ```js
 // package.json
@@ -132,4 +137,4 @@ Now we can start our development server with the following terminal command:
 npm run start
 ```
 
-Final code for this project can be found [here](https://github.com/AliLynne/gatsby_hello_world)
+Final code for this project can be found on [Github](https://github.com/AliLynne/gatsby_hello_world)

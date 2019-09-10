@@ -29,6 +29,7 @@ module.exports = {
     }
   },
   plugins: [
+    `gatsby-remark-images`,
     `gatsby-plugin-stripe`,
     {
       resolve: `gatsby-plugin-feed`,

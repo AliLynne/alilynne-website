@@ -28,6 +28,8 @@ const IndexPage = () => {
         <div className={homeStyles.info}>
           <h1>Hi, I'm Ali.</h1>
           <p>Full Stack Web Developer</p>
+          <Link to="/about">Seeking Employment</Link>
+          <Link to="/projects">Making Things</Link>
           <p>
             <Link to="/contact">Contact Me</Link>
           </p>

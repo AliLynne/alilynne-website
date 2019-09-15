@@ -79,6 +79,8 @@ const Checkout = class extends React.Component {
           {this.state.buttonText}
         </button>
         <p>{this.state.error}</p>
+        <p>or</p>
+        <a href='https://ko-fi.com/Z8Z313JNG' target='_blank'><img height='36' style={{border:0, height:36}} src='https://az743702.vo.msecnd.net/cdn/kofi5.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
       </form>
     )
   }

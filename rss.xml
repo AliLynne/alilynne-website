@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AliLynne]]></title><description><![CDATA[Where Ali talks about programming and life. She focuses on JavaScript, React, & Gatsby as well as crochet and sewing.]]></description><link>https://www.alilynne.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Sep 2019 19:23:31 GMT</lastBuildDate><item><title><![CDATA[I Made Another Website]]></title><description><![CDATA[I Can't Help Myself I stumbled onto Frontend Mentor a couple of weeks ago and I've finally gotten around to doing a challenge.  Frontend…]]></description><link>https://www.alilynne.com2019_08_29_made_another</link><guid isPermaLink="false">https://www.alilynne.com2019_08_29_made_another</guid><pubDate>Thu, 29 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;I Can&apos;t Help Myself&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[AliLynne]]></title><description><![CDATA[Where Ali talks about programming and life. She focuses on JavaScript, React, & Gatsby as well as crochet and sewing.]]></description><link>https://www.alilynne.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 15 Sep 2019 21:51:27 GMT</lastBuildDate><item><title><![CDATA[I Made Another Website]]></title><description><![CDATA[I Can't Help Myself I stumbled onto Frontend Mentor a couple of weeks ago and I've finally gotten around to doing a challenge.  Frontend…]]></description><link>https://www.alilynne.com2019_08_29_made_another</link><guid isPermaLink="false">https://www.alilynne.com2019_08_29_made_another</guid><pubDate>Thu, 29 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;I Can&apos;t Help Myself&lt;/h2&gt;
 &lt;p&gt;I stumbled onto &lt;a href=&quot;https://www.frontendmentor.io&quot;&gt;Frontend Mentor&lt;/a&gt; a couple of weeks ago and I&apos;ve finally gotten around to doing a challenge. &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.frontendmentor.io&quot;&gt;Frontend Mentor&lt;/a&gt; is a website that streamlines the process for practicing front end developers to create real projects. I&apos;ve spent a lot of time lately working with Material Design/Material-UI and I felt like some of my CSS skills were getting rusty. I&apos;d been using MD because it kept me from spending hours and hours trying to figure out exactly how I wanted to position components. Frontend Mentor does the same thing by giving me an already thought out design.&lt;/p&gt;
 &lt;p&gt;For my first challenge I went with one of the &quot;Newbie&quot; designated designs just to see what it was all about. And I can say that I love it and will be doing more of these. The downloaded file gave me all the images and font choices and the colors that I needed to create the design.&lt;/p&gt;
@@ -7,7 +7,7 @@
 &lt;p&gt;And my (not quite finished) &lt;a href=&quot;https://alilynnefrontendmentor.firebaseapp.com/&quot;&gt;Result!&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hoping to get to doing another one soon where I walk through my process of breaking the project down into parts and getting started.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TIL #1 - Gatsby Link & activeClassName]]></title><description><![CDATA[Gatsby Link and activeClassName I've used the Link component from Gatsby before, but didn't know about activeClassName. For those who aren't…]]></description><link>https://www.alilynne.comTIL_2019_08_25</link><guid isPermaLink="false">https://www.alilynne.comTIL_2019_08_25</guid><pubDate>Mon, 26 Aug 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 750px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 500px;&quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -17,14 +17,14 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Shelf of books&quot;
         title=&quot;Shelf of books&quot;
-        src=&quot;/static/4ecbeb4609ba9b631c41f971f3059ad3/a66cd/books.jpg&quot;
-        srcset=&quot;/static/4ecbeb4609ba9b631c41f971f3059ad3/4272c/books.jpg 188w,
-/static/4ecbeb4609ba9b631c41f971f3059ad3/1459e/books.jpg 375w,
+        src=&quot;/static/4ecbeb4609ba9b631c41f971f3059ad3/48a11/books.jpg&quot;
+        srcset=&quot;/static/4ecbeb4609ba9b631c41f971f3059ad3/3dff4/books.jpg 125w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/9fb78/books.jpg 250w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/48a11/books.jpg 500w,
 /static/4ecbeb4609ba9b631c41f971f3059ad3/a66cd/books.jpg 750w,
-/static/4ecbeb4609ba9b631c41f971f3059ad3/c0626/books.jpg 1125w,
-/static/4ecbeb4609ba9b631c41f971f3059ad3/45751/books.jpg 1500w,
+/static/4ecbeb4609ba9b631c41f971f3059ad3/971c4/books.jpg 1000w,
 /static/4ecbeb4609ba9b631c41f971f3059ad3/cfb5d/books.jpg 5107w&quot;
-        sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+        sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;

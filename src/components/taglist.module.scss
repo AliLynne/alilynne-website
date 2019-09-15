@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+
+  p {
+    margin-right: 1rem;
+  }
+}
+
+.list {
+  display: flex;
+
+  &__item {
+    margin-right: 1rem;
+  }
+}

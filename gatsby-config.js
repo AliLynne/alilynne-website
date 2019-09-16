@@ -140,6 +140,18 @@ module.exports = {
         trackingUrl: `fathom.tdvm.net`,
         siteId: 'KOKQF'
       }
+    },
+    {
+      resolve: `gatsby-plugin-react-axe`,
+      options: {
+        showInProduction: false
+      }
+    },
+    {
+      resolve: `gatsby-plugin-html-attributes`,
+      options: {
+        lang: 'en'
+      }
     }
   ]
 }

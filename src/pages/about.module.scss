@@ -2,10 +2,17 @@
   display: flex;
 }
 
+.container {
+  display: flex;
+}
+
+.skills {
+  margin-left: 4rem;
+}
 
 ul {
   list-style: none;
-  margin-left: 0;
+  margin-left: 1rem;
 }
 
 a {

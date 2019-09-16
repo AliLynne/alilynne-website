@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       <ul className={projectStyles.projects}>
         {data.allProjectsJson.edges.map(edge => {
           return (
@@ -46,10 +46,16 @@ const Projects = () => {
                   <p>{edge.node.description}</p>
                   <ul className={projectStyles.linkList}>
                     <li>
-                      <a href={edge.node.projectUrl}><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                      <a href={edge.node.projectUrl}>
+                        <FontAwesomeIcon icon={faExternalLinkAlt} />
+                        <span className={projectStyles.visibleHidden}>View Project</span>
+                      </a>
                     </li>
                     <li>
-                      <a href={edge.node.sourceUrl}><FontAwesomeIcon icon={faGithubSquare} /></a>
+                      <a href={edge.node.sourceUrl}>
+                        <FontAwesomeIcon icon={faGithubSquare} />
+                      <span className={projectStyles.visibleHidden}>Source code on github</span>
+                      </a>
                     </li>
                   </ul>
                 </div>

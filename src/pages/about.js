@@ -30,28 +30,79 @@ const AboutPage = () => {
         <section className={aboutStyles.about}>
           <div className={aboutStyles.info}>
             <h1>About</h1>
-            <p>I'm a full stack web developer currently contributing to f/oss. Mu current focus is on React and Gatsby, but I love all things JavaScript.</p>
+            <p>I'm a full stack web developer currently contributing to f/oss. My current focus is on React and Gatsby, but I love all things JavaScript.</p>
             <p>Currently open to Full-Time or Part-Time Web Development in the San Francisco Bay Area or Remote.</p>
-            <ul>
-              <li>
-                <Link to="/projects">Check out my projects</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact me</Link>
-              </li>
-            </ul>
-            
-          </div>
-          <div className={aboutStyles.me}>
-            <div className={aboutStyles.frame}>
-              <NonStretchedImage className={aboutStyles.image} fluid={data.file.childImageSharp.fluid} alt="Black and White headshot of Ali" />
+            <div>
+              <ul>
+                <li>
+                  <Link to="/projects">Check out my projects</Link>
+                </li>
+                <li>
+                  <Link to="/contact">Contact me</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
-        
-        
-        
-        
+        <div className={aboutStyles.container}>
+          <section className={aboutStyles.tech}>
+            <h2 className={aboutStyles.tech__headline}>Technologies</h2>
+            <ul className={aboutStyles.tech__list}>
+              <li className={aboutStyles.tech__listItem}>
+                <h3>JavaScript</h3>
+                <ul>
+                  <li>Vanilla JS</li>
+                  <li>Node</li>
+                  <li>React/Gatsby</li>
+                  <li>Express</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Web Development</h3>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS/SASS</li>
+                  <li>Bootstrap</li>
+                  <li>Material UI</li>
+                  <li>a11y - accessibility</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Services</h3>
+                <ul>
+                  <li>Heroku</li>
+                  <li>Firebase</li>
+                  <li>MongoDB</li>
+                  <li>Netlify</li>
+                </ul>
+              </li>
+              <li>
+                <h3>Tools</h3>
+                <ul>
+                  <li>git</li>
+                  <li>Visual Studio Code</li>
+                  <li>CircleCI</li>
+                  <li>Terminal</li>
+                  <li>github</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section className={aboutStyles.skills}>
+            <h2 className={aboutStyles.skills__headline}>Skills</h2>
+            <ul className={aboutStyles.skills__list}>
+              <li className={aboutStyles.skills__listItem}>
+                Communication
+              </li>
+              <li className={aboutStyles.skills__listItem}>
+                Patience
+              </li>
+              <li className={aboutStyles.skills__listItem}>
+                Compassion
+              </li>
+            </ul>
+          </section>
+        </div>
         
       </Layout>
   )

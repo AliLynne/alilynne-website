@@ -23,6 +23,7 @@
     "gatsby-plugin-fathom": "^1.1.0",
     "gatsby-plugin-feed": "^2.3.11",
     "gatsby-plugin-html-attributes": "^1.0.5",
+    "gatsby-plugin-just-comments": "^0.2.3",
     "gatsby-plugin-manifest": "^2.2.9",
     "gatsby-plugin-react-axe": "^0.2.2",
     "gatsby-plugin-react-helmet": "^3.1.5",

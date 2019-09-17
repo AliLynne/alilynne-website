@@ -30,7 +30,7 @@ const AboutPage = () => {
         <section className={aboutStyles.about}>
           <div className={aboutStyles.info}>
             <h1>About</h1>
-            <p>I'm a full stack web developer currently contributing to f/oss. My current focus is on React and Gatsby, but I love all things JavaScript and problem solving. I have a degree in English Literature and Creative Writing from Purdue University. Becuase of this, I love reading documentation to learn how to get the most out of my tech stack.</p>
+            <p>I'm a full stack web developer currently contributing to open source projects. My current focus is on React and Gatsby, but I love all things JavaScript and problem solving. I have a degree in English Literature and Creative Writing from Purdue University. Because of this, I love reading documentation to learn how to get the most out of my tech stack.</p>
             <p>I'm actively seeking Full-Time, Part-Time, or contract Web Development in the San Francisco Bay Area or Remote.</p>
             <div>
               <ul>

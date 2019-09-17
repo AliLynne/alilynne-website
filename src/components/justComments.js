@@ -6,7 +6,7 @@ const justComments = () => {
   return (
     <div>
       <JustComments
-        apikey="34896e12-7801-4bde-8d88-042289092b9e"
+        apikey={process.env.GATSBY_JUST_COMMENTS_API_KEY}
         locale="en_US"
         recaptcha="true"
         disableanonymouslogin="true"

@@ -24,4 +24,4 @@ jobs:
 
       # install Gatsby CLI
       - run: npm install gatsby-cli
-      - run: gatsby develop
+      - run: npm build

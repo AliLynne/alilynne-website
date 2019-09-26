@@ -28,10 +28,6 @@ jobs:
       # build app
       - run: npm run build
 
-      # deploy app to github pages
-      - run: gh-pages -d public
-  
-
   deploy:
     docker:
       - image: circleci/node

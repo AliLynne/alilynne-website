@@ -22,7 +22,16 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      # Set git configuration so we can push back to github.
+      - run: git config --global user.email "ali@alilynne.com"
+      - run: git config --global user.name "AliLynne"
+      - run: git config --global push.default simple
+
       # install Gatsby CLI
       - run: npm install gatsby-cli
+
+      # build app
       - run: npm run build
-      - run: npm run deploy
+
+      # deploy app to github pages
+      - run: gh-pages -d public

@@ -23,5 +23,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # install Gatsby CLI
-      - run: npm install gatsby-cli
-      - run: npm build
+      - run: npm install -g gatsby-cli
+      - run: npm run build

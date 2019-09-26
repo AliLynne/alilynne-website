@@ -22,11 +22,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # Set git configuration so we can push back to github.
-      - run: git config --global user.email "ali@alilynne.com"
-      - run: git config --global user.name "AliLynne"
-      - run: git config --global push.default simple
-
       # install Gatsby CLI
       - run: npm install gatsby-cli
 
@@ -35,3 +30,42 @@ jobs:
 
       # deploy app to github pages
       - run: gh-pages -d public
+  
+
+  deploy:
+    docker:
+      - image: circleci/node
+
+      working_directory: ~/repo
+
+      steps:
+        - checkout
+      
+        - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # Set git configuration so we can push back to github.
+      - run: git config --global user.email "ali@alilynne.com"
+      - run: git config --global user.name "AliLynne"
+      - run: git config --global push.default simple
+
+      - run: npm run deploy
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  app:
+    jobs:
+      - deploy

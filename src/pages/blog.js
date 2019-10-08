@@ -12,7 +12,12 @@ import blogStyles from './blog.module.scss'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        sort: {
+          fields: [frontmatter___date]
+          order: DESC
+        }
+      ) {
         edges {
           node {
             id
@@ -28,27 +33,27 @@ const BlogPage = () => {
       }
     }
   `)
-  
+
   return (
-      <Layout>
-        <SEO title="Blog" />
-        <h2>Blog Posts</h2>
-        <ol className={blogStyles.posts}>
-          {data.allMarkdownRemark.edges.map(post => {
-            return (
-              <li key={post.node.id} className={blogStyles.post}>
-                <Link to={`/blog/${post.node.fields.slug}`}>
-                  <FontAwesomeIcon icon={faClipboard} className={blogStyles.icon} size="3x" />
-                  <div>
-                    <h2>{post.node.frontmatter.title}</h2>
-                    <p>{post.node.frontmatter.date}</p>
-                  </div>
-                </Link>
-              </li>
-            )
-          })}
-        </ol>
-      </Layout>
+    <Layout>
+      <SEO title="Blog" />
+      <h2>Blog Posts</h2>
+      <ol className={blogStyles.posts}>
+        {data.allMarkdownRemark.edges.map(post => {
+          return (
+            <li key={post.node.id} className={blogStyles.post}>
+              <Link to={`/blog/${post.node.fields.slug}`}>
+                <FontAwesomeIcon icon={faClipboard} className={blogStyles.icon} size="3x" />
+                <div>
+                  <h2>{post.node.frontmatter.title}</h2>
+                  <p>{post.node.frontmatter.date}</p>
+                </div>
+              </Link>
+            </li>
+          )
+        })}
+      </ol>
+    </Layout>
   )
 }
 

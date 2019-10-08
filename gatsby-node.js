@@ -14,7 +14,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
   }
 }
 
-// this graphql 
+
 module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -23,14 +23,9 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   const res = await graphql(`
     query {
       allMarkdownRemark(
-        sort: {fields: [frontmatter___date], order: DESC},
-        ${
-          process.env.NODE_ENV === 'production' ?
-          'filter: {frontmatter: {draft: {ne: true}}}' :
-          ''
-        }
         limit: 1000
-      ) {
+        filter: {frontmatter: {date: {ne: null}}}
+        ) {
         edges {
           node {
             fields {
@@ -38,6 +33,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               tags
+              date(formatString: "dddd DD MMMM YYYY")
             }
           }
         }
@@ -64,7 +60,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     })
   })
-  
+
   const tags = res.data.tagsGroup.group
   tags.forEach(tag => {
     createPage({

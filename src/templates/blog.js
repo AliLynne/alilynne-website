@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { graphql } from 'gatsby'
+import BlogPostNotification from '../components/BlogPostNotification'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Stripe from '../components/stripe'
@@ -25,12 +26,13 @@ export const query = graphql`
 const Blog = (props) => {
   return (
     <Layout>
-      <SEO title={props.data.markdownRemark.frontmatter.title} article/>
+      <SEO title={props.data.markdownRemark.frontmatter.title} article />
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <p>{props.data.markdownRemark.frontmatter.date}</p>
       <TagsList tags={props.data.markdownRemark.frontmatter.tags} />
-      <div className={postStyles.outer} dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}>
+      <div className={postStyles.outer} dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}>
       </div>
+      <BlogPostNotification />
       <Stripe />
       <JustComments />
     </Layout>

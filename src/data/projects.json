@@ -11,8 +11,15 @@
     "projectUrl": "https://www.alilynne.com"
   },
   {
-    "title": "Meditation Tracker",
-    "description": "Meditation tracker using React, Express & Firebase",
-    "projectUrl": "https://www.alilynne.com"
+    "title": "Meditation Tracker Client",
+    "description": "Meditation tracker client using React, Express & Firebase",
+    "projectUrl": "https://meditate-46519.web.app/",
+    "sourceUrl": "https://github.com/AliLynne/meditate-client"
+  },
+  {
+    "title": "Meditation Tracker Server",
+    "description": "Meditation tracker server with Firebase Functions",
+    "projectUrl": "https://meditate-46519.web.app/",
+    "sourceUrl": "https://github.com/AliLynne/meditate-server"
   }
 ]

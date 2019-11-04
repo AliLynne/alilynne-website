@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Stripe from '../components/stripe'
 import TagsList from '../components/tagsList'
-import JustComments from '../components/justComments'
+// import JustComments from '../components/justComments'
 
 import postStyles from './blogpost.module.scss'
 
@@ -34,7 +34,7 @@ const Blog = (props) => {
       </div>
       <BlogPostNotification />
       <Stripe />
-      <JustComments />
+      {/* Commented out until I can afford it. <JustComments /> */}
     </Layout>
   )
 }

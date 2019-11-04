@@ -8,4 +8,14 @@
     margin-left: 2rem;
   }
 
+  blockquote {
+    margin: 1em 2em;
+    border-left: 1px dashed #999;
+    padding-left: 1em; 
+  }
+
+  blockquote p:first-line {
+    font-variant: small-caps; 
+  }
+
 }

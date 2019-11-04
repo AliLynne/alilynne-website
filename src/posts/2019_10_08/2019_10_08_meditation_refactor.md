@@ -7,7 +7,7 @@ tags: ["React", "JAMstack", "Testing"]
 
 ## So Excited!!!!
 
-I'm super excited about reworking this project. Meditation is a huge part of my day to day life and I like being able to look back and see what I've accomplished, see which types of meditation cause which mental changes, whether different times of day enhance or detract from the experience, etc.
+I'm super excited about reworking [this]('https://meditate-46519.web.app/') project. Meditation is a huge part of my day to day life and I like being able to look back and see what I've accomplished, see which types of meditation cause which mental changes, whether different times of day enhance or detract from the experience, etc.
 
 The current iteration of the app isn't really all that useable to me. I can't wait to be able to move off of a tracking app that controls who gets my data and onto a self-hosted platform where I control my own data.
 

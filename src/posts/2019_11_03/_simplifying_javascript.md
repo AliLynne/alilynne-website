@@ -75,7 +75,7 @@ Template literals
   - assign anything complicated to a variable outside the template literal
 - use backticks even when combining two variables, signals that a string is being returned
 
-# Chapter 4 - Arrays
+# Chapter 2 - Arrays
 
 > An array "can do almost anything you'd ever want for a collection of information."
 
@@ -147,5 +147,61 @@ function checkExists(array) {
 
 This is clearer when read later or by someone else.
 
-## Tip 7
+## Tip 7 - Mold Arrays with the Spread Operator
 
+Spread Operator: ...
+(Yup, just the three dots)
+
+> 'it converts an array to a list of items
+
+> 'You can’t, for example, assign the output to a variable. You have to spread the information into something.'
+
+> 'mutates the original array'
+
+> 'mutations can create so much confusion that you’re better off avoiding them whenever possible.'
+
+```js
+const array = ['thing1', 'thing2', 'thing3']
+const spread = ...array
+console.log(spread)
+// Uncaught SyntaxError: Unexpected token '...'
+```
+
+```js
+const array = ['thing1', 'thing2', 'thing3']
+const spread = [...array]
+console.log(spread)
+// (2) ["thing1", "thing2", "thing3"]
+```
+
+```js
+// arr.slice([begin[, end]])
+function removeItem(array, toRemove) {
+  // grab the index of the item to be removed
+  const index = array.indexOf(toRemove)
+  // this will return an array of arrays
+  return [array.slice(0,index), array.slice(index + 1)]
+}
+
+// [["item1", "item2"], "item4"]
+```
+
+```js
+// arr.slice([begin[, end]])
+function removeItem(array, toRemove) {
+  // grab the index of the item to be removed
+  const index = array.indexOf(toRemove)
+  // return a new array that consist of everything from the beginning of the array up to the removed item, plus everything after the removed item
+  // this is two different lists (shallow copies of arrays) combined to make a new array
+  return [...array.slice(0,index), ...array.slice(index + 1)]
+}
+```
+
+Things to aim for:
+- no mutations
+- easy to read
+- simple
+- reuseable
+- predictable
+
+> 'parameters are lists of arguments, so the spread operator allows you to convert an array to a list of parameters'

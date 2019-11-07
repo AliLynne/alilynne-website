@@ -205,3 +205,11 @@ Things to aim for:
 - predictable
 
 > 'parameters are lists of arguments, so the spread operator allows you to convert an array to a list of parameters'
+
+
+## Tip 8 - Avoid Push Mutations with the Spread Operator
+
+> mutations can have unexpected consequences
+
+> The `.push()` method chanages the original array by adding an item to the end
+

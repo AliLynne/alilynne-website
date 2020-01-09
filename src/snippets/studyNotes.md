@@ -21,3 +21,10 @@
 - Monolithic vs microservice architecture
   - Pros & Cons
 - Asynchronous programming - why it's important in JavaScript
+- Event delegation
+- `this` - how has it changed w/ ES6
+- Explain difference between variable that is: `null`, `undefined` or `undeclared`
+  - How to check for these states?
+- What is a closure?
+  - Why use one?
+- What's the difference between Array.forEach() and Array.map()?

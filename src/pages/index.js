@@ -22,7 +22,7 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="AliLynne" />
       <div className={homeStyles.container}>
         <div className={homeStyles.info}>
           <h1>Hi, I'm Ali.</h1>

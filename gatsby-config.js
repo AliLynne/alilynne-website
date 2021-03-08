@@ -1,32 +1,32 @@
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === "production"
 
 module.exports = {
   siteMetadata: {
-    title: 'AliLynne',
+    title: "AliLynne",
     titleTemplate: "%s | AliLynne",
-    author: 'Ali Lynne Thompson',
-    description: 'Where Ali talks about programming and life. She focuses on JavaScript, React, & Gatsby as well as crochet and sewing.',
+    author: "Ali Lynne Thompson",
+    description:
+      "Where Ali talks about programming and life. She focuses on JavaScript, React, & Gatsby as well as crochet and sewing.",
     url: "https://www.alilynne.com",
     siteUrl: "https://www.alilynne.com",
-    image: "/src/images/rosePink.png",
+    image: "/rosePink.png",
     twitterUsername: "@alilynnet",
     stripe: {
-      public_key: 'pk_live_5nKb8kqHdyaoi9bASiiKbdOO00eHIdX5YK',
-      plans:
-        [
-          {
-            "label": "$5 per month",
-            "id": "plan_Fm950fWNdiNekC"
-          },
-          {
-            "label": "$10 per month",
-            "id": "plan_Fm96pTXYQTIoad"
-          }
-        ],
+      public_key: "pk_live_5nKb8kqHdyaoi9bASiiKbdOO00eHIdX5YK",
+      plans: [
+        {
+          label: "$5 per month",
+          id: "plan_Fm950fWNdiNekC",
+        },
+        {
+          label: "$10 per month",
+          id: "plan_Fm96pTXYQTIoad",
+        },
+      ],
       button_text: "Keep Me Going",
       success_page: "success",
-      cancel_page: "cancel"
-    }
+      cancel_page: "cancel",
+    },
   },
   plugins: [
     `gatsby-remark-images`,
@@ -59,18 +59,18 @@ module.exports = {
                 }
               }
             `,
-            output: `rss.xml`
-          }
-        ]
-      }
+            output: `rss.xml`,
+          },
+        ],
+      },
     },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/src/data`
-      }
+        path: `${__dirname}/src/data`,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
@@ -79,15 +79,15 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts`,
-        ignore: isProd ? ['**/_*.md'] : []
-      }
+        ignore: isProd ? ["**/_*.md"] : [],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -101,57 +101,57 @@ module.exports = {
             options: {
               maxWidth: 500,
               linkImagesToOriginal: false,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              showLineNumbers: true
-            }
-          }
-        ]
-      }
+              showLineNumbers: true,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Roboto', 'Dancing Script']
-        }
-      }
+          families: ["Roboto", "Dancing Script"],
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/images/rosePink.svg`
-      }
+        icon: `src/images/rosePink.svg`,
+      },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /icons/
-        }
-      }
+          include: /icons/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-fathom`,
       options: {
         trackingUrl: `fathom.tdvm.net`,
-        siteId: 'KOKQF'
-      }
+        siteId: "KOKQF",
+      },
     },
     {
       resolve: `gatsby-plugin-react-axe`,
       options: {
-        showInProduction: false
-      }
+        showInProduction: false,
+      },
     },
     {
       resolve: `gatsby-plugin-html-attributes`,
       options: {
-        lang: 'en'
-      }
-    }
-  ]
+        lang: "en",
+      },
+    },
+  ],
 }

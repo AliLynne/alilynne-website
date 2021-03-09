@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-blog-js","path":"/blog/gatsby","webpackCompilationHash":"","result":{"data":{"markdownRemark":{"frontmatter":{"title":"Second blog post","date":"2019-08-25"},"html":"<p>More text for a blog post.</p>"}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"gatsby"}}}

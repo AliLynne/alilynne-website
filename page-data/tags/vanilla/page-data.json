@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-tags-js","path":"/tags/vanilla/","webpackCompilationHash":"fbed4abb1e7ac4203577","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"_scope"},"frontmatter":{"title":"Scope in Javascript"}}}]}},"pageContext":{"isCreatedByStatefulCreatePages":false,"tag":"Vanilla"}}}

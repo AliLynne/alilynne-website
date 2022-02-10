@@ -41,7 +41,7 @@
     "gatsby-transformer-remark": "^2.6.19",
     "gatsby-transformer-sharp": "^2.2.12",
     "mem": "^5.1.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prism-themes": "^1.1.0",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
